@@ -49,7 +49,7 @@ pixi run main
 ```
 
 ```SHELL
-coder@dev-container:~/video-subtitle-generator$ pixi run hel
+coder@dev-container:~/video-subtitle-generator$ pixi run help
 Pixi task (help in default): python backend/main.py -h
 usage: main.py [-h]
                [-l {auto,en,zh-cn,zh-tw,zh-hk,zh-sg,zh-hans,zh-hant,de,es,ru,ko,fr,ja,pt,tr,pl,ca,nl,ar,sv,it,id,hi,fi,vi,he,uk,el,ms,cs,ro,da,hu,ta,no,th,ur,hr,bg,lt,la,ml,cy,sk,te,fa,lv,bn,sr,az,sl,kn,et,mk,br,eu,is,hy,ne,mn,bs,kk,sq,sw,gl,mr,pa,si,km,sn,yo,so,af,oc,ka,be,tg,sd}]
