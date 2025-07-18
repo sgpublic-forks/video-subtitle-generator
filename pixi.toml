@@ -1,0 +1,46 @@
+[workspace]
+authors = ["Madray Haven <sgpublic2002@gmail.com>"]
+channels = ["conda-forge"]
+name = "video-subtitle-generator"
+platforms = ["linux-64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+gui = { cmd = "python gui.py" }
+main = { cmd = "python backend/main.py" }
+help = { cmd = "python backend/main.py -h" }
+
+[dependencies]
+python = "3.10.*"
+pixi-pycharm = ">=0.0.8,<0.0.9"
+cudatoolkit = ">=11.3,<11.4"
+cudnn = ">=8,<9"
+numpy = ">=1.21.6,<1.22"
+
+[pypi-dependencies]
+librosa = ">=0.9.1,<0.10"
+filesplit = ">=3.0.2,<3.1"
+numba = ">=0.55.1,<0.56"
+pysrt = ">=1.1.2,<2"
+regex = ">=2022.4.24,<2022.5"
+six = ">=1.16.0,<1.17"
+tqdm = ">=4.64.0,<4.65"
+zhconv = ">=1.4.3,<1.5"
+tiktoken = ">=0.4.0,<0.5"
+PySimpleGUI = { version = ">=5.0.0,<5.1", index = "https://PySimpleGUI.net/install" }
+
+
+[feature.gpu.system-requirements]
+cuda = "11.3"
+
+[feature.gpu.pypi-dependencies]
+torch = { version = ">=1.11.0, <1.12", index = "https://download.pytorch.org/whl/cu113" }
+torchvision = { version = ">=0.12.0, <0.13", index = "https://download.pytorch.org/whl/cu113" }
+
+[feature.cpu.pypi-dependencies]
+torch = { version = ">=1.11.0, <1.12", index = "https://download.pytorch.org/whl/cpu" }
+torchvision = { version = ">=0.12.0, <0.13", index = "https://download.pytorch.org/whl/cpu" }
+
+[environments]
+cpu = { features = ["cpu"] }
+default = { features = ["gpu"] }

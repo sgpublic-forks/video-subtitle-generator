@@ -366,3 +366,5 @@ $RECYCLE.BIN/
 /backend/models/large_asr/infer_model
 /backend/models/medium_asr/infer_model
 /backend/ffmpeg/win_x64/ffmpeg.exe
+# pixi environments
+.pixi
